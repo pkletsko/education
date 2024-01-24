@@ -23,3 +23,15 @@ export function convertLinkedListToArray(head) {
 
     return resultArray;
 }
+
+export function introduceCycleToLinkedList(head) {
+    let resultHead = head;
+
+    let current = head;
+    while(current.next != null) {
+        current = current.next;
+    }
+    current.next = head;
+
+    return resultHead;
+}
