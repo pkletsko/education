@@ -1,9 +1,8 @@
 import {generateRepeatedCombinationsOfN} from "./GenerateRepeatedCombinationsOfN.js";
 
-console.log(generateRepeatedCombinationsOfN([1,2,3], [], [], 1));
-console.log(generateRepeatedCombinationsOfN([1,2,3], [], [], 2));
-console.log(generateRepeatedCombinationsOfN([1,2,3], [], [], 3));
-
-// valid situation when N > items in array
-console.log(generateRepeatedCombinationsOfN([1,2,3], [], [], 4));
+console.log(generateRepeatedCombinationsOfN(0, 0, [1,2,5], [], [], 0));
+console.log(generateRepeatedCombinationsOfN(0, 0, [1,2,5], [], [], 1));
+console.log(generateRepeatedCombinationsOfN(0, 0, [1,2,5], [], [], 2));
+console.log(generateRepeatedCombinationsOfN(0, 0, [1,2,5], [], [], 3));
+console.log(generateRepeatedCombinationsOfN(0, 0, [1,2,5], [], [], 4));
 
