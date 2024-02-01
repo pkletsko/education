@@ -1,13 +1,9 @@
-import {generateAllSubArrays} from "./subarray/AllSubArrays.js";
-import {generateAllSubSequences} from "./subsequences/AllSubSequences.js";
-import {generateCombinationsOfN} from "./combination/filter/GenerateCombinationsOfN.js";
-import {generateRepeatedCombinationsOfN} from "./combination/filter/GenerateRepeatedCombinationsOfN.js";
-import {generatePermutationsOfN} from "./permutation/filter/GeneratePermutationsOfN.js";
-import {generateRepeatedPermutationsOfN} from "./permutation/filter/GenerateRepeatedPermutationsOfN.js";
-import {generateCombinations} from "./combination/GenerateCombinations.js";
-import {generateRepeatedCombinations} from "./combination/GenerateRepeatedCombinations.js";
-import {generatePermutations} from "./permutation/GeneratePermutations.js";
-import {generateRepeatedPermutations} from "./permutation/GenerateRepeatedPermutations.js";
+import {generateAllSubArrays} from "./subarray/recursion/AllSubArrays.js";
+import {generateAllSubSequences} from "./subsequence/recursion/AllSubSequences.js";
+import {generateCombinations} from "./combination/recursion/GenerateCombinations.js";
+import {generateRepeatedCombinations} from "./combination/recursion/GenerateRepeatedCombinations.js";
+import {generatePermutations} from "./permutation/recursion/GeneratePermutations.js";
+import {generateRepeatedPermutations} from "./permutation/recursion/GenerateRepeatedPermutations.js";
 
 let unsortedBaseArray = [3,1,2];
 let sortedBaseArray = [1,2,3]; // [1, 2, 3]

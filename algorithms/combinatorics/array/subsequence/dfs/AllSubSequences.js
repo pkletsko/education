@@ -3,7 +3,7 @@ export function generateAllSubSequences(nums){
 
     function dfs(start, path) {
         if (start === nums.length) {
-            return [];
+            return;
         }
 
         for(let index = start; index < nums.length; index++) {

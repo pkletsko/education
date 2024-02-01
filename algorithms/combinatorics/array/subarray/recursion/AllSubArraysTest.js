@@ -1,6 +1,6 @@
 import {generateAllSubArrays} from "./AllSubArrays.js";
-import {stringToArray} from "../utils/Converters.js";
-import {generateAllSubSequences} from "../subsequences/AllSubSequences.js";
+import {stringToArray} from "../../../../utils/Converters.js";
+import {generateAllSubSequences} from "../../subsequence/recursion/AllSubSequences.js";
 
 // original array [1,2,3]
 // all possible sub arrays :

@@ -1,9 +1,9 @@
-import {generateAllSubArrays} from "./subarray/AllSubArrays.js";
-import {generateAllSubSequences} from "./subsequences/AllSubSequences.js";
-import {generateCombinations} from "./combination/GenerateCombinations.js";
-import {generatePermutations} from "./permutation/GeneratePermutations.js";
-import {generateRepeatedCombinations} from "./combination/GenerateRepeatedCombinations.js";
-import {generateRepeatedPermutations} from "./permutation/GenerateRepeatedPermutations.js";
+import {generateAllSubArrays} from "./subarray/recursion/AllSubArrays.js";
+import {generateAllSubSequences} from "./subsequence/recursion/AllSubSequences.js";
+import {generateCombinations} from "./combination/recursion/GenerateCombinations.js";
+import {generatePermutations} from "./permutation/recursion/GeneratePermutations.js";
+import {generateRepeatedCombinations} from "./combination/recursion/GenerateRepeatedCombinations.js";
+import {generateRepeatedPermutations} from "./permutation/recursion/GenerateRepeatedPermutations.js";
 
 let baseArray = [1,2,3];
 // What we can do with this array?

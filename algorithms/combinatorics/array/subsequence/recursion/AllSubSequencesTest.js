@@ -1,5 +1,4 @@
 import {generateAllSubSequences} from "./AllSubSequences.js";
-import {generateCombinations} from "../combination/GenerateCombinations.js";
 
 
 console.log(generateAllSubSequences(0, [1,2,3], [], []));
