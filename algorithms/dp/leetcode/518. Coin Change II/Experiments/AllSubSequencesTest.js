@@ -2,7 +2,7 @@ import {change} from "./AllSubSequences.js";
 
 // this result shows that we can use subsequence to compose amount.
 // in this case we can compose 5 by subsequence of the last array item 5.
-console.log(change(5, [1,2,5]));
+console.log(change([1,2,5], 5));
 
 // if we want to compose
 // 5=5

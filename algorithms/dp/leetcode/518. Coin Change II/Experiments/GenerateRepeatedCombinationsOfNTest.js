@@ -1,6 +1,6 @@
 import {change} from "./GenerateRepeatedCombinationsOfN.js";
 
-console.log(change(5, [1,2,5]));
+console.log(change([1,2,5], 5));
 
 // 5=5
 // 5=2+2+1

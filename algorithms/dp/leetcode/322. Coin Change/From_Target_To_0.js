@@ -1,6 +1,6 @@
 export function coinMinus(coins, target) {
     let memo = {};
-    // path contraction from Target to 0 Begin [<--------] End
+    // path construction from Target to 0 Begin [<--------] End
     // memo will be filled:              Begin [-------->] End
 
     function dfs(sum) {
