@@ -3,7 +3,7 @@ export function longestCommonSubsequenceMinus(text1, text2) {
     const columns = text2.length + 1;
     const memo = Array.from(Array(rows), () => new Array(columns).fill(-1));
     // path construction from Target to 0 Begin [<--------] End
-    // memo will be filled:              Begin [--------->] End
+    // memo will be filled:              Begin [-------->] End
 
     function dfs(i, j) {
         if (i === 0 || j === 0) {
