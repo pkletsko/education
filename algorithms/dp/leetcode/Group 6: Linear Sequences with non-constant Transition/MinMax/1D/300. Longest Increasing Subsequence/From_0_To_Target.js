@@ -13,9 +13,10 @@ export function lengthOfLISPlus(nums) {
         }
 
         let aggregateResult = 1;
+
         for(let index = start + 1; index < nums.length; index++) {
             if (nums[start] < nums[index]) { // pruning
-                aggregateResult = Math.max( dfs(index) + 1, aggregateResult);
+                aggregateResult = Math.max(dfs(index) + 1, aggregateResult);
             }
         }
 

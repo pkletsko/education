@@ -13,7 +13,7 @@ export function lengthOfLISMinus(nums) {
             return memo[start];
         }
 
-        let aggregateResult =  1; // begin with starting a new LIS
+        let aggregateResult = 1; // begin with starting a new LIS
 
         for (let index = 1; index < start; index++) { // try building upon a pre-existing LIS
             let result = dfs(index); // compute dfs, otherwise it may never be computed
