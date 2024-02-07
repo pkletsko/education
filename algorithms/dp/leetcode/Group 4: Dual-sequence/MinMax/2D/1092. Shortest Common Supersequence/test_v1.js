@@ -5,6 +5,5 @@ import {shortestCommonSupersequenceMinus} from "./From_Target_To_0.js";
 console.log(shortestCommonSupersequencePlus_v2("abac", "cab"));
 console.log(shortestCommonSupersequencePlus("abac", "cab"));
 
-// there is a bug
 console.log(shortestCommonSupersequenceMinus("abac", "cab"));
 

@@ -1,5 +1,5 @@
 export function shortestCommonSupersequenceMinus(word1, word2) {
-    const memo = Array.from(Array(word1.length + 1), ()=> new Array(word2.length + 1));
+    const memo = Array.from(Array(word1.length + 1), () => Array(word2.length + 1));
     // path construction from Target to 0 Begin [<--------] End
     // memo will be filled:              Begin [-------->] End
 
@@ -8,12 +8,12 @@ export function shortestCommonSupersequenceMinus(word1, word2) {
             return "";
         }
 
-        if (i < 0 ) {
-            return word2.slice(j);
+        if (i < 0) {
+            return word2.slice(0, j + 1);
         }
 
         if (j < 0) {
-            return word1.slice(i);
+            return word1.slice(0, i + 1);
         }
 
         if (memo[i][j]) {
@@ -22,15 +22,15 @@ export function shortestCommonSupersequenceMinus(word1, word2) {
 
         let result;
         if (word1[i] === word2[j]) {
-            result = word1[i] + dfs(i - 1, j - 1);
+            result = dfs(i - 1, j - 1) + word1[i];
         } else {
-            const takeFromWord1 = word1[i] + dfs(i - 1, j);
-            const takeFromWord2 = word2[j] + dfs(i, j - 1);
-            result = takeFromWord1.length > takeFromWord2.length ? takeFromWord2 : takeFromWord1;
+            const takeFromWord1 = dfs(i - 1, j) + word1[i];
+            const takeFromWord2 = dfs(i, j - 1) + word2[j];
+            result = takeFromWord1.length >= takeFromWord2.length ? takeFromWord2 : takeFromWord1;
         }
 
         return memo[i][j] = result;
     }
 
-    return dfs(word1.length - 1, word1.length - 1);
+    return dfs(word1.length - 1, word2.length - 1);
 }
