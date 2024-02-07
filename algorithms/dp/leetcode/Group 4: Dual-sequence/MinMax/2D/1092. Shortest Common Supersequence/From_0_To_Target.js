@@ -1,5 +1,5 @@
 export function shortestCommonSupersequencePlus(word1, word2) {
-    const memo = Array.from(Array(word1.length), ()=> new Array(word2.length));
+    const memo = Array.from(Array(word1.length), () => Array(word2.length));
     // path construction from to Target Begin [-------->] End
     // memo will be filled:              Begin [<--------] End
 
