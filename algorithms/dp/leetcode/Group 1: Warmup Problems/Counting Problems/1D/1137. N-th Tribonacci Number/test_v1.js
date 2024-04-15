@@ -1,5 +1,5 @@
-import {tribonacciMinus} from "./From_Target_To_0.js";
+import {tribonacci} from "./From_Target_To_0.js";
 
-console.log(tribonacciMinus(40));
+console.log(tribonacci(40));
 
 
