@@ -19,7 +19,7 @@ export function coinPlus(coins, target) {
         let aggregateResult = Infinity;
 
         for(const coin of coins) {
-            let result = dfs(sum + coin);
+            const result = dfs(sum + coin);
             aggregateResult = Math.min(result + 1, aggregateResult);
         }
 
