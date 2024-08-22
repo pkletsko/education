@@ -1,0 +1,42 @@
+/**
+ * Given n pairs of parentheses, write a function to generate all combinations of well-formed parentheses.
+ *
+ * Example 1:
+ *
+ * Input: n = 3
+ * Output: ["((()))","(()())","(())()","()(())","()()()"]
+ * Example 2:
+ *
+ * Input: n = 1
+ * Output: ["()"]
+ */
+
+/**
+ * @param {number} n
+ * @return {string[]}
+ */
+export function generateParenthesis_array(n) {
+    const res = [];
+
+    function dfs(openedCount, closedCount, path) {
+        if (openedCount === n && closedCount === n) {
+            res.push([...path].join(""));
+        }
+
+        if (openedCount < n) {
+            path.push("(");
+            dfs(openedCount + 1, closedCount, path);
+            path.pop();
+        }
+
+        if (closedCount < openedCount) {
+            path.push(")");
+            dfs(openedCount, closedCount + 1, path);
+            path.pop();
+        }
+    }
+
+    dfs(0, 0, []);
+
+    return res;
+}

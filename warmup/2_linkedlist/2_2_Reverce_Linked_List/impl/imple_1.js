@@ -1,5 +1,10 @@
-import { ListNode } from '../../utils/ListNode.js';
-
+/**
+ * Definition for singly-linked list.
+ * function ListNode(val, next) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.next = (next===undefined ? null : next)
+ * }
+ */
 /**
  * @param {ListNode} head
  * @return {ListNode}
@@ -22,17 +27,3 @@ export function reverseList(head) {
 
   return result;
 }
-
-// A -> B -> C
-
-// null
-
-// node = A > B
-// head = B -> C
-// node = A > null
-// current A > null
-//---------
-
-// node = B -> C
-// head = C-> null
-// node = A > null
