@@ -32,23 +32,23 @@
 export function pathSum(root, targetSum) {
     let res = [];
 
-    function dfs(root, path, sum) {
-        if (!root) {
+    function dfs(node, path, sum) {
+        if (!node) {
             return;
         }
-        if (!root.left && !root.right) {
-            if (sum + root.val === targetSum) {
-                path.push(root.val);
+        if (!node.left && !node.right) {
+            if (sum + node.val === targetSum) {
+                path.push(node.val);
                 res.push([...path]);
                 path.pop();
             }
             return;
         }
 
-        for (const child of [root.left, root.right]) {
+        for (const child of [node.left, node.right]) {
             if (child) {
-                path.push(root.val);
-                dfs(child, path, sum + root.val);
+                path.push(node.val);
+                dfs(child, path, sum + node.val);
                 path.pop();
             }
         }

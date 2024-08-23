@@ -50,5 +50,4 @@ export function binaryTreePaths_v1(root) {
     dfs(root, [root.val + ""]);
 
     return res;
-
-};
+}

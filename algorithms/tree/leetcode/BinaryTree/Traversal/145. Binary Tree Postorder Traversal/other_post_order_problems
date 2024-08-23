@@ -1,0 +1,43 @@
+Here are some LeetCode problems where **Post-Order Traversal** is typically used or beneficial:
+
+### 1. **[Binary Tree Maximum Path Sum (LeetCode #124)](https://leetcode.com/problems/binary-tree-maximum-path-sum/)**
+   - **Description:** Find the maximum path sum in a binary tree, where the path can start and end at any node.
+   - **Why Post-Order:** You need to consider paths that might go through a node's left and right children, so you calculate the potential maximum path sum for each subtree before processing the node itself.
+
+### 2. **[Sum of Left Leaves (LeetCode #404)](https://leetcode.com/problems/sum-of-left-leaves/)**
+   - **Description:** Calculate the sum of all left leaves in a binary tree.
+   - **Why Post-Order:** You often need to explore all subtrees and determine if a node's left child is a leaf after traversing the left and right subtrees.
+
+### 3. **[Flatten Binary Tree to Linked List (LeetCode #114)](https://leetcode.com/problems/flatten-binary-tree-to-linked-list/)**
+   - **Description:** Flatten a binary tree into a linked list in-place, following the pre-order traversal.
+   - **Why Post-Order:** Despite requiring a pre-order-like structure in the output, the transformation of the tree itself is easier when done in post-order to ensure that the right subtree is fully processed before it's reconnected.
+
+### 4. **[Binary Tree Tilt (LeetCode #563)](https://leetcode.com/problems/binary-tree-tilt/)**
+   - **Description:** Find the tilt of a binary tree, where the tilt of a node is the absolute difference between the sum of all left subtree node values and all right subtree node values.
+   - **Why Post-Order:** You need to calculate the sum of all nodes in the left and right subtrees before you can determine the tilt of a node.
+
+### 5. **[Lowest Common Ancestor of a Binary Tree (LeetCode #236)](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/)**
+   - **Description:** Find the lowest common ancestor (LCA) of two given nodes in a binary tree.
+   - **Why Post-Order:** As discussed, this problem requires processing children first to determine if the current node is the LCA.
+
+### 6. **[Diameter of Binary Tree (LeetCode #543)](https://leetcode.com/problems/diameter-of-binary-tree/)**
+   - **Description:** Find the length of the diameter of the tree, where the diameter is the length of the longest path between any two nodes.
+   - **Why Post-Order:** You need to know the height of the left and right subtrees before calculating the diameter that passes through the current node.
+
+### 7. **[Find Leaves of Binary Tree (LeetCode #366)](https://leetcode.com/problems/find-leaves-of-binary-tree/)**
+   - **Description:** Collect and remove all leaves from the binary tree repeatedly until the tree is empty.
+   - **Why Post-Order:** Leaves are naturally identified by post-order traversal, and then the tree can be processed from the bottom up.
+
+### 8. **[Construct Binary Tree from Inorder and Postorder Traversal (LeetCode #106)](https://leetcode.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/)**
+   - **Description:** Given inorder and postorder traversal of a tree, construct the binary tree.
+   - **Why Post-Order:** You process nodes from the postorder list, which means you need to build the tree from the bottom up (post-order gives you leaves first).
+
+### 9. **[House Robber III (LeetCode #337)](https://leetcode.com/problems/house-robber-iii/)**
+   - **Description:** Given a binary tree, return the maximum amount of money the thief can rob without robbing two directly linked houses.
+   - **Why Post-Order:** You must calculate the best option (robbing or not robbing) for each subtree before deciding for the root, which is naturally done in post-order.
+
+### 10. **[Convert BST to Greater Tree (LeetCode #538)](https://leetcode.com/problems/convert-bst-to-greater-tree/)**
+   - **Description:** Convert a BST so that every key is changed to the sum of all keys greater than or equal to the original key in BST.
+   - **Why Post-Order:** This problem typically uses reverse in-order traversal, which can be seen as a variation that processes nodes in post-order from the perspective of decreasing values.
+
+These problems often require post-order traversal because the nature of the problem involves processing child nodes before the parent node, making post-order traversal the natural choice for solving them.

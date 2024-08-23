@@ -1,0 +1,43 @@
+Here are some common LeetCode problems where **Pre-Order Traversal** is typically used or beneficial:
+
+### 1. **[Binary Tree Paths (LeetCode #257)](https://leetcode.com/problems/binary-tree-paths/)**
+   - **Description:** Find all root-to-leaf paths in a binary tree.
+   - **Why Pre-Order:** You start from the root and build paths as you traverse down the tree, appending the current node’s value to the path before moving to its children.
+
+### 2. **[Path Sum III (LeetCode #437)](https://leetcode.com/problems/path-sum-iii/)**
+   - **Description:** Find the number of paths that sum to a given value, where the path can start and end at any node.
+   - **Why Pre-Order:** You check the current node first and then recursively explore all possible paths starting from the current node.
+
+### 3. **[Serialize and Deserialize Binary Tree (LeetCode #297)](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/)**
+   - **Description:** Serialize a binary tree to a string and deserialize it back to a tree.
+   - **Why Pre-Order:** Pre-order traversal is often used to serialize a binary tree because it captures the structure of the tree, including null nodes, from the root downward.
+
+### 4. **[Construct Binary Tree from Preorder and Inorder Traversal (LeetCode #105)](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/)**
+   - **Description:** Construct a binary tree given the preorder and inorder traversal arrays.
+   - **Why Pre-Order:** Since the preorder traversal gives the root nodes first, it’s natural to use it to build the tree by identifying root nodes and recursively constructing left and right subtrees.
+
+### 5. **[Flatten Binary Tree to Linked List (LeetCode #114)](https://leetcode.com/problems/flatten-binary-tree-to-linked-list/)**
+   - **Description:** Flatten a binary tree to a linked list in-place.
+   - **Why Pre-Order:** You traverse the tree in pre-order, and as you process each node, you restructure the tree to resemble a linked list.
+
+### 6. **[Symmetric Tree (LeetCode #101)](https://leetcode.com/problems/symmetric-tree/)**
+   - **Description:** Check whether a binary tree is a mirror of itself (i.e., symmetric around its center).
+   - **Why Pre-Order:** A modified pre-order traversal can be used to compare the left and right subtrees simultaneously to ensure they are mirror images of each other.
+
+### 7. **[Validate Binary Search Tree (LeetCode #98)](https://leetcode.com/problems/validate-binary-search-tree/)**
+   - **Description:** Determine if a given binary tree is a valid binary search tree (BST).
+   - **Why Pre-Order:** Although this problem is often solved using in-order traversal, a pre-order approach can also be used by passing down bounds (min and max values) to ensure each node's value fits the BST property.
+
+### 8. **[Construct Binary Tree from Preorder and Postorder Traversal (LeetCode #889)](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/)**
+   - **Description:** Given the preorder and postorder traversal of a tree, reconstruct the binary tree.
+   - **Why Pre-Order:** The problem directly involves reconstructing the tree from preorder traversal, leveraging the order in which nodes are visited.
+
+### 9. **[N-ary Tree Preorder Traversal (LeetCode #589)](https://leetcode.com/problems/n-ary-tree-preorder-traversal/)**
+   - **Description:** Given an N-ary tree, return the preorder traversal of its nodes' values.
+   - **Why Pre-Order:** This is a straightforward application where the tree is traversed starting from the root, then recursively visiting each child node.
+
+### 10. **[Recover Binary Search Tree (LeetCode #99)](https://leetcode.com/problems/recover-binary-search-tree/)**
+   - **Description:** Recover a binary search tree where two nodes have been swapped by mistake.
+   - **Why Pre-Order:** Although the solution typically involves in-order traversal, some approaches might explore pre-order traversal depending on the specific constraints or additional problems requirements.
+
+These problems highlight how pre-order traversal is essential in various tree-related operations, particularly those that involve building, comparing, or transforming trees from the root downward.

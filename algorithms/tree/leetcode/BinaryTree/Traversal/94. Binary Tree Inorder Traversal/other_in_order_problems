@@ -1,0 +1,43 @@
+Here are some common LeetCode problems where **In-Order Traversal** is typically used or beneficial:
+
+### 1. **[Binary Search Tree Iterator (LeetCode #173)](https://leetcode.com/problems/binary-search-tree-iterator/)**
+   - **Description:** Implement an iterator over a binary search tree (BST) with the `next()` method returning the next smallest element.
+   - **Why In-Order:** In-order traversal of a BST gives the nodes in ascending order, which makes it perfect for this problem.
+
+### 2. **[Validate Binary Search Tree (LeetCode #98)](https://leetcode.com/problems/validate-binary-search-tree/)**
+   - **Description:** Determine if a given binary tree is a valid binary search tree (BST).
+   - **Why In-Order:** In-order traversal of a valid BST produces a sorted sequence of values. This property is used to validate the BST.
+
+### 3. **[Kth Smallest Element in a BST (LeetCode #230)](https://leetcode.com/problems/kth-smallest-element-in-a-bst/)**
+   - **Description:** Find the k-th smallest element in a binary search tree.
+   - **Why In-Order:** Since in-order traversal of a BST yields nodes in ascending order, the k-th smallest element can be directly found by traversing in-order and counting nodes.
+
+### 4. **[Recover Binary Search Tree (LeetCode #99)](https://leetcode.com/problems/recover-binary-search-tree/)**
+   - **Description:** Recover a binary search tree where two nodes have been swapped by mistake.
+   - **Why In-Order:** An in-order traversal will identify the points where the BST property is violated, helping to locate the swapped nodes.
+
+### 5. **[Convert Sorted Array to Binary Search Tree (LeetCode #108)](https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/)**
+   - **Description:** Convert a sorted array into a height-balanced binary search tree.
+   - **Why In-Order:** The recursive construction of the tree uses the middle element as the root, and the left and right halves are recursively handled, ensuring an in-order traversal of the resulting BST would match the sorted array.
+
+### 6. **[Convert Binary Search Tree to Sorted Doubly Linked List (LeetCode #426)](https://leetcode.com/problems/convert-binary-search-tree-to-sorted-doubly-linked-list/)**
+   - **Description:** Convert a BST to a sorted circular doubly linked list.
+   - **Why In-Order:** An in-order traversal allows linking nodes in the exact order as required by the sorted doubly linked list.
+
+### 7. **[Inorder Successor in BST (LeetCode #285)](https://leetcode.com/problems/inorder-successor-in-bst/)**
+   - **Description:** Given a node in a BST, find its in-order successor (the node with the smallest key greater than the key of the given node).
+   - **Why In-Order:** The in-order successor is simply the next node in an in-order traversal of the BST.
+
+### 8. **[Minimum Distance Between BST Nodes (LeetCode #783)](https://leetcode.com/problems/minimum-distance-between-bst-nodes/)**
+   - **Description:** Find the minimum difference between the values of any two different nodes in a BST.
+   - **Why In-Order:** An in-order traversal gives the nodes in sorted order, allowing us to easily compute the minimum difference between consecutive nodes.
+
+### 9. **[Binary Tree Inorder Traversal (LeetCode #94)](https://leetcode.com/problems/binary-tree-inorder-traversal/)**
+   - **Description:** Given a binary tree, return the in-order traversal of its nodes' values.
+   - **Why In-Order:** This is a straightforward problem where the goal is to implement in-order traversal to return the node values in the correct order.
+
+### 10. **[Two Sum IV - Input is a BST (LeetCode #653)](https://leetcode.com/problems/two-sum-iv-input-is-a-bst/)**
+   - **Description:** Given a BST and a target value, determine if there exist two elements in the BST such that their sum equals the given target.
+   - **Why In-Order:** In-order traversal is useful for comparing node values in a sorted manner, helping efficiently find the target sum using two-pointer or hash-set techniques.
+
+These problems demonstrate the usefulness of in-order traversal, especially when working with binary search trees, as it inherently respects the sorted order of the nodes.
