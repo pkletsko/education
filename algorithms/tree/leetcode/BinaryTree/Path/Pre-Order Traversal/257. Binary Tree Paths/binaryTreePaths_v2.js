@@ -20,7 +20,7 @@
  * @param {BinaryTreeNode} root
  * @return {string[]}
  */
-export function binaryTreePaths_v2_incorrect(root) {
+export function binaryTreePaths_v2(root) {
     const res = [];
 
     function dfs(node, path) {
@@ -32,11 +32,14 @@ export function binaryTreePaths_v2_incorrect(root) {
 
         if(!node.left && !node.right) {
             res.push([...path].join("->"));
+            path.pop();
             return;
         }
 
         dfs(node.left, path);
         dfs(node.right, path);
+
+        path.pop();
     }
 
     dfs(root, []);

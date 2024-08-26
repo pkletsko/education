@@ -29,7 +29,7 @@
  * @param {number} targetSum
  * @return {number[][]}
  */
-export function pathSum(root, targetSum) {
+export function pathSum_v2(root, targetSum) {
     let res = [];
 
     function dfs(node, path, sum) {
@@ -37,21 +37,21 @@ export function pathSum(root, targetSum) {
             return;
         }
 
+        // Based on Pre-order we collect parent node value and push it to all children
         path.push(node.val);
 
-        if (!node.left && !node.right) {
-            if (sum + node.val === targetSum) {
-                res.push([...path]);
-            }
-            path.pop();
-            return;
+        // calculate additional state
+        const newSum = sum + node.val;
+
+        dfs(node.left, path, newSum);
+        dfs(node.right, path, newSum);
+
+        // Based on Post-order we can be sure that after we came back from left and right branches and current node has no left and right child,
+        // we can be sure that this is a leaf node
+        if (!node.left && !node.right && newSum === targetSum) {
+            res.push([...path]);
         }
 
-        for (const child of [node.left, node.right]) {
-            if (child) {
-                dfs(child, path, sum + node.val);
-            }
-        }
         path.pop();
     }
 

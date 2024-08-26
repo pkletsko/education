@@ -24,11 +24,11 @@ export function binaryTreePaths_v1(root) {
     const res = [];
 
     function dfs(node, path) {
-        if (node === null) {
+        if (!node) {
             return;
         }
 
-        if(node.left === null && node.right === null) {
+        if(!node.left && !node.right) {
             res.push([...path].join("->"));
             return;
         }
@@ -44,10 +44,9 @@ export function binaryTreePaths_v1(root) {
             dfs(node.right, path);
             path.pop();
         }
-
     }
 
-    dfs(root, [root.val + ""]);
+    dfs(root, [root.val]);
 
     return res;
 }

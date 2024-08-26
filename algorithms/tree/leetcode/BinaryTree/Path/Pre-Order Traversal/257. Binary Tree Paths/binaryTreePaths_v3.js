@@ -31,7 +31,7 @@ export function binaryTreePaths_v3(root) {
         pathStr += node.val + "->";
 
         if(!node.left && !node.right) {
-            res.push(pathStr.slice(0,pathStr.length - 2));
+            res.push(pathStr.slice(0, pathStr.length - 2));
             return;
         }
 
