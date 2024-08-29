@@ -47,7 +47,7 @@ export function buildNAryTree(serialized) {
 }
 
 //Level-order representation
-export function buildBinaryTreeFromArray(arr) {
+export function level_order_deserialization_from_array(arr) {
     function buildSubTree(index) {
         // Base case: If index is out of bounds or element is null
         if (index >= arr.length || !arr[index]) {

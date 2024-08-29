@@ -32,13 +32,15 @@
  * }
  */
 
+import {BinaryTreeNode} from "../../../../utils/Converters.js";
+
 /**
  * Encodes a tree to a single string.
  *
- * @param {TreeNode} root
+ * @param {BinaryTreeNode} root
  * @return {string}
  */
-var serialize = function(root) {
+export function serialize(root) {
     let res = [];
 
     function dfs(node) {
@@ -54,15 +56,15 @@ var serialize = function(root) {
 
     dfs(root);
     return res.join(',');
-};
+}
 
 /**
  * Decodes your encoded data to tree.
  *
  * @param {string} data
- * @return {TreeNode}
+ * @return {BinaryTreeNode}
  */
-var deserialize = function(data) {
+export function deserialize(data) {
     const values = data.split(',');
     let index = 0;
 
@@ -73,7 +75,7 @@ var deserialize = function(data) {
         }
 
         // Create the current node with the current value
-        const node = new TreeNode(parseInt(values[index]));
+        const node = new BinaryTreeNode(parseInt(values[index]));
         index++;
 
         // Recursively build the left and right subtrees
@@ -85,7 +87,7 @@ var deserialize = function(data) {
 
     return dfs();
 
-};
+}
 
 /**
  * Your functions will be called as such:
